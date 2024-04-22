@@ -1,0 +1,34 @@
+server:
+  port: 8080  # Port on which the server will run
+  servlet:
+    context-path: /bizsense  # Context path for API endpoints
+
+# Database configuration
+spring:
+  security:
+    user:
+      name: user
+      password: password
+  datasource:
+    url: jdbc:mysql://localhost:3306/bizsense_db
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+
+
+# Logging configuration
+logging:
+  level:
+    root: INFO  # Root logging level
+    com.example.myapp: DEBUG  # Logging level for a specific package or class
+
+# Swagger configuration
+swagger:
+  enabled: true  # Enable Swagger for API documentation
+
+
